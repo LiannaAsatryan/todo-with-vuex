@@ -1,0 +1,126 @@
+body {
+  background-color: #b1aa81;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-list-h1 {
+  color: #403029;
+  text-align: center;
+  margin-inline: auto;
+  font-size: 70px;
+  margin-top: 10px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+
+  .header-input-field {
+    width: 576px;
+    padding: 10px;
+    border: 3px solid #403029;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 10px;
+    margin-inline: auto;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 50px;
+    margin-inline: auto;
+    max-width: 576px;
+
+    .add-button {
+      background-color: #403029;
+      min-width: 100px;
+      color: #FFFFFF;
+      display: inline-block;
+      margin-inline: auto;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      padding: 12px 20px;
+      font-size: 20px;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      transition: all ease 10ms;
+      border: none;
+
+      &:hover{
+        background-color: darken(#403029, 10%);
+      }
+
+      .layout {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+    }
+
+    .filter {
+      min-width: 105px;
+      max-height: 45px;
+      margin-inline: auto;
+      padding: 8px 10px;
+      border: 2px solid #403029;
+      border-radius: 5px;
+      background-color: #fff;
+      font-size: 16px;
+    }
+  }
+}
+
+.todo-list-table {
+  margin-inline: auto;
+  margin-top: 50px;
+  width: 700px;
+
+  thead {
+    .col-header {
+      font-size: 30px;
+    }
+
+    th:first-child {
+      width: 50%;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 3px solid #403029;
+      background-color: #FFFFFF;
+    }
+
+    td {
+      padding-left: 10px;
+      font-size: 20px;
+      border-radius: 3px;
+      box-sizing: border-box;
+      position: relative;
+
+      select {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+      }
+
+      button {
+        position: absolute;
+        background-color: #403029;
+        color: #FFFFFF;
+        border-radius: 10px;
+        top: 5%;
+        bottom: 5%;
+        right: 0;
+        left: 25%;
+        cursor: pointer;
+        max-width: 80px;
+      }
+    }
+  }
+}
