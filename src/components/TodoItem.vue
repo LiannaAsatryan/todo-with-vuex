@@ -1,5 +1,6 @@
 <template>
   <tr>
+    <td>{{ todo.id }}</td>
     <td>{{ todo.task }}</td>
     <td>
       <select v-model="status" @change="updateStatus">
@@ -11,6 +12,7 @@
     <td>
       <button @click="removeTodo">Remove</button>
     </td>
+    <td>{{ todo.date }}</td>
   </tr>
 </template>
 
@@ -20,12 +22,16 @@ import {useStore} from 'vuex'
 
 const props = defineProps({
   todo: Object,
-  index: Number
+  index: Number,
+  date: Date,
+  id: Number,
 })
 
 const store = useStore()
 
 const status = ref(props.todo.status)
+
+const date = ref(props.todo.date)
 
 const updateStatus = () => {
   store.dispatch('updateTodoStatus', {index: props.index, status: status.value})
