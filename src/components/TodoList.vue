@@ -34,7 +34,7 @@
           </button>
           Task</th>
         <th class="col-header">Status</th>
-        <th class="col-header">Action</th>
+        <th class="col-header">Remove</th>
         <th class="col-header">
           <button @click="sortTodos('date', 'asc')">
             <img src="./icons/up-arrow.png" style="width: 5px; height: 10px" alt="up">
@@ -43,6 +43,7 @@
             <img src="./icons/up-arrow.png" style="transform: rotate(180deg); width: 5px; height: 10px" alt="up">
           </button>
           Date</th>
+        <th class="col-header">Edit</th>
       </tr>
       </thead>
       <tbody>

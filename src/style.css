@@ -69,14 +69,11 @@ body {
 .todo-list-table {
   margin-inline: auto;
   margin-top: 50px;
-  width: 1000px;
+  width: 1200px;
 }
 .todo-list-table thead .col-header {
   font-size: 30px;
 }
-/*.todo-list-table thead th:first-child {*/
-/*  width: 50%;*/
-/*}*/
 .todo-list-table tbody tr {
   border-bottom: 3px solid #403029;
   background-color: #FFFFFF;
@@ -104,7 +101,7 @@ body {
   top: 5%;
   bottom: 5%;
   right: 0;
-  left: 25%;
+  left: 20%;
   cursor: pointer;
   max-width: 80px;
 }

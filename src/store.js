@@ -19,9 +19,10 @@ const store = createStore({
         updateTodoDate(state, { index, date }) {
             state.todos[index].date = date;
         },
-        // searchTodos(state, searchedWord) {
-        //     state.todos = state.todos.filter(todo => todo.task.toLowerCase().includes(searchedWord.toLowerCase()));
-        // },
+        updateTodoTask(state, { index, task }) {
+            state.todos[index].task = task;
+        },
+
     },
     actions: {
         addTodo({ commit }, todo) {
@@ -35,7 +36,10 @@ const store = createStore({
         },
         updateTodoDate({ commit }, payload) {
             commit('updateTodoDate', payload)
-        }
+        },
+        updateTodoTask({ commit }, payload) {
+            commit('updateTodoTask', payload);
+        },
     },
     getters: {
         getTodos(state) {
